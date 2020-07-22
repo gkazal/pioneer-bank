@@ -22,7 +22,6 @@
     </div>
 
     <div id="transaction-area">
-        <h1>Transaction Area</h1>
         <div class="row transaction-box">
             <div class="col-md-4">
                 <!-- deposit class ta col-md-4 a nile vag hoye nice cole ase..cz col theke ota margin kore so jaiga thake na.but ekne col-4 theke 1ta deposite nai and tar modde margin kore -->
@@ -104,7 +103,7 @@
             //console.log(withdrawNumber)
 
             updateSpanText('currentWithdraw', withdrawNumber) // nil box ar modde number ar sate sada box ar j withdrawNumber ace seta summ korlam function diye.
-
+            updateSpanText('currentBalance', -1 * withdrawNumber)
             document.getElementById('withdrawAmount').value = ""
         })
 
@@ -114,10 +113,10 @@
             return amountNumber
         }
 
-        function updateSpanText(id, depositNumber){
+        function updateSpanText(id, addedNumber){
             const current = document.getElementById(id).innerText
             const currentNumber = parseFloat(current)
-            const totalAmount = currentNumber + depositNumber
+            const totalAmount = currentNumber + addedNumber
             document.getElementById(id).innerText = totalAmount
         }
 

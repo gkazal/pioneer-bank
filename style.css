@@ -12,6 +12,7 @@ body{
 }
 .status{
     margin: 0px 20px;
+    margin-bottom: 10px;
     padding: 20px;
     border-radius: 10px;
     color: white;
